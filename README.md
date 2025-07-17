@@ -142,4 +142,229 @@ Author: Dosite Iradukunda Cyiza <145858744+dosite-cyiza@users.noreply.github.com
 Date:   Thu Jul 17 11:40:06 2025 +0200
 
     Initial commit
+
+
+```
+### Exercise 2
+```bash
+user@Dosite-Cyiza-Laptop MINGW64 /e/downloads/Exercises/Gym-Git-Exercises-Solutions (dev)
+$ git stash list
+
+user@Dosite-Cyiza-Laptop MINGW64 /e/downloads/Exercises/Gym-Git-Exercises-Solutions (dev)
+$ git add home.html
+
+user@Dosite-Cyiza-Laptop MINGW64 /e/downloads/Exercises/Gym-Git-Exercises-Solutions (dev)
+$ git stash
+Saved working directory and index state WIP on dev: 89bff22 setup
+
+user@Dosite-Cyiza-Laptop MINGW64 /e/downloads/Exercises/Gym-Git-Exercises-Solutions (dev)
+$ git status
+On branch dev
+nothing to commit, working tree clean
+
+user@Dosite-Cyiza-Laptop MINGW64 /e/downloads/Exercises/Gym-Git-Exercises-Solutions (dev)
+$ git stash list
+stash@{0}: WIP on dev: 89bff22 setup
+
+user@Dosite-Cyiza-Laptop MINGW64 /e/downloads/Exercises/Gym-Git-Exercises-Solutions (dev)
+$ git add about.html
+
+user@Dosite-Cyiza-Laptop MINGW64 /e/downloads/Exercises/Gym-Git-Exercises-Solutions (dev)
+$ git stash
+Saved working directory and index state WIP on dev: 89bff22 setup
+
+user@Dosite-Cyiza-Laptop MINGW64 /e/downloads/Exercises/Gym-Git-Exercises-Solutions (dev)
+$ git stash list
+stash@{0}: WIP on dev: 89bff22 setup
+stash@{1}: WIP on dev: 89bff22 setup
+
+user@Dosite-Cyiza-Laptop MINGW64 /e/downloads/Exercises/Gym-Git-Exercises-Solutions (dev)
+$ git status
+On branch dev
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        about.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+user@Dosite-Cyiza-Laptop MINGW64 /e/downloads/Exercises/Gym-Git-Exercises-Solutions (dev)
+$ git add team.html
+
+user@Dosite-Cyiza-Laptop MINGW64 /e/downloads/Exercises/Gym-Git-Exercises-Solutions (dev)
+$ git stash
+Saved working directory and index state WIP on dev: 89bff22 setup
+
+user@Dosite-Cyiza-Laptop MINGW64 /e/downloads/Exercises/Gym-Git-Exercises-Solutions (dev)
+$ git stash list
+stash@{0}: WIP on dev: 89bff22 setup
+stash@{1}: WIP on dev: 89bff22 setup
+stash@{2}: WIP on dev: 89bff22 setup
+
+user@Dosite-Cyiza-Laptop MINGW64 /e/downloads/Exercises/Gym-Git-Exercises-Solutions (dev)
+$ git status
+On branch dev
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        about.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+user@Dosite-Cyiza-Laptop MINGW64 /e/downloads/Exercises/Gym-Git-Exercises-Solutions (dev)
+$ git stast pop stash@{1}
+git: 'stast' is not a git command. See 'git --help'.
+
+The most similar command is
+        stash
+
+user@Dosite-Cyiza-Laptop MINGW64 /e/downloads/Exercises/Gym-Git-Exercises-Solutions (dev)
+$ git stash pop stash@{1}
+error: The following untracked working tree files would be overwritten by merge:
+        about.html
+Please move or remove them before you merge.
+Aborting
+On branch dev
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        about.html
+        team.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+The stash entry is kept in case you need it again.
+
+user@Dosite-Cyiza-Laptop MINGW64 /e/downloads/Exercises/Gym-Git-Exercises-Solutions (dev)
+$ git stash list
+stash@{0}: WIP on dev: 89bff22 setup
+stash@{1}: WIP on dev: 89bff22 setup
+stash@{2}: WIP on dev: 89bff22 setup
+
+user@Dosite-Cyiza-Laptop MINGW64 /e/downloads/Exercises/Gym-Git-Exercises-Solutions (dev)
+$ git stash pop stash@{1}
+error: The following untracked working tree files would be overwritten by merge:
+        about.html
+Please move or remove them before you merge.
+Aborting
+On branch dev
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        about.html
+        team.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+The stash entry is kept in case you need it again.
+
+user@Dosite-Cyiza-Laptop MINGW64 /e/downloads/Exercises/Gym-Git-Exercises-Solutions (dev)
+$ rm about.html
+
+user@Dosite-Cyiza-Laptop MINGW64 /e/downloads/Exercises/Gym-Git-Exercises-Solutions (dev)
+$ rm team.html
+
+user@Dosite-Cyiza-Laptop MINGW64 /e/downloads/Exercises/Gym-Git-Exercises-Solutions (dev)
+$ git stash list
+stash@{0}: WIP on dev: 89bff22 setup
+stash@{1}: WIP on dev: 89bff22 setup
+stash@{2}: WIP on dev: 89bff22 setup
+
+user@Dosite-Cyiza-Laptop MINGW64 /e/downloads/Exercises/Gym-Git-Exercises-Solutions (dev)
+$ git stash pop stash@{1}
+On branch dev
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   about.html
+
+Dropped stash@{1} (9a77a886830003678b5641cffed9583e20dc2795)
+
+user@Dosite-Cyiza-Laptop MINGW64 /e/downloads/Exercises/Gym-Git-Exercises-Solutions (dev)
+$ git status
+On branch dev
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   about.html
+
+
+user@Dosite-Cyiza-Laptop MINGW64 /e/downloads/Exercises/Gym-Git-Exercises-Solutions (dev)
+$ git stash list
+stash@{0}: WIP on dev: 89bff22 setup
+stash@{1}: WIP on dev: 89bff22 setup
+
+user@Dosite-Cyiza-Laptop MINGW64 /e/downloads/Exercises/Gym-Git-Exercises-Solutions (dev)
+$ git stash pop stash@{1}
+On branch dev
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   about.html
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   home.html
+
+Dropped stash@{1} (2452cc5c93b7ea9a1d9032e01f2054169e5738b9)
+
+user@Dosite-Cyiza-Laptop MINGW64 /e/downloads/Exercises/Gym-Git-Exercises-Solutions (dev)
+$ git status
+On branch dev
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   about.html
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   home.html
+
+
+user@Dosite-Cyiza-Laptop MINGW64 /e/downloads/Exercises/Gym-Git-Exercises-Solutions (dev)
+$ git commit add --all
+fatal: paths 'add ...' with -a does not make sense
+
+user@Dosite-Cyiza-Laptop MINGW64 /e/downloads/Exercises/Gym-Git-Exercises-Solutions (dev)
+$ git add --all
+
+user@Dosite-Cyiza-Laptop MINGW64 /e/downloads/Exercises/Gym-Git-Exercises-Solutions (dev)
+$ git status
+On branch dev
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   about.html
+        modified:   home.html
+
+
+user@Dosite-Cyiza-Laptop MINGW64 /e/downloads/Exercises/Gym-Git-Exercises-Solutions (dev)
+$ git commit -m "setup home and about pages"
+[dev 57f9484] setup home and about pages
+ 2 files changed, 1 insertion(+), 1 deletion(-)
+ create mode 100644 about.html
+
+user@Dosite-Cyiza-Laptop MINGW64 /e/downloads/Exercises/Gym-Git-Exercises-Solutions (dev)
+$ git push origin dev
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 364 bytes | 364.00 KiB/s, done.
+Total 4 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/dosite-cyiza/Gym-Git-Exercises-Solutions.git
+   89bff22..57f9484  dev -> dev
+
+user@Dosite-Cyiza-Laptop MINGW64 /e/downloads/Exercises/Gym-Git-Exercises-Solutions (dev)
+$ git stash list
+stash@{0}: WIP on dev: 89bff22 setup
+
+user@Dosite-Cyiza-Laptop MINGW64 /e/downloads/Exercises/Gym-Git-Exercises-Solutions (dev)
+$ git stash pop stash@{0}
+On branch dev
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   team.html
+
+Dropped stash@{0} (c646524b2b02110b47d66327e8e67050a9b4a07e)
+
+user@Dosite-Cyiza-Laptop MINGW64 /e/downloads/Exercises/Gym-Git-Exercises-Solutions (dev)
+$ git reset --hard
+HEAD is now at 57f9484 setup home and about pages
+
+user@Dosite-Cyiza-Laptop MINGW64 /e/downloads/Exercises/Gym-Git-Exercises-Solutions (dev)
+$
+
 ```
