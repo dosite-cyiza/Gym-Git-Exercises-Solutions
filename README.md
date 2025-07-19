@@ -60,7 +60,7 @@ To https://github.com/dosite-cyiza/Gym-Git-Exercises-Solutions.git
 ```
 
 ### Exercise 2
-
+``` bash
 user@Dosite-Cyiza-Laptop MINGW64 /e/Exercises/Exercises/Gym-Git-Exercises-Solutions (dev)
 $ touch home.html
 
@@ -383,3 +383,7 @@ HEAD is now at 5dc96d8 setup project
 
 user@Dosite-Cyiza-Laptop MINGW64 /e/Exercises/Exercises/Gym-Git-Exercises-Solutions (dev)
 $
+```
+
+
+
