@@ -385,5 +385,44 @@ user@Dosite-Cyiza-Laptop MINGW64 /e/Exercises/Exercises/Gym-Git-Exercises-Soluti
 $
 ```
 
+## Bundle 2
 
+### Exercise 1
+
+``` bash 
+
+user@Dosite-Cyiza-Laptop MINGW64 /e/Exercises/Exercises/Gym-Git-Exercises-Solutions (dev)
+$ git checkout -b ft/bundle-2
+Switched to a new branch 'ft/bundle-2'
+
+user@Dosite-Cyiza-Laptop MINGW64 /e/Exercises/Exercises/Gym-Git-Exercises-Solutions (ft/bundle-2)
+$ touch services.html
+
+user@Dosite-Cyiza-Laptop MINGW64 /e/Exercises/Exercises/Gym-Git-Exercises-Solutions (ft/bundle-2)
+$ git add services.html
+
+user@Dosite-Cyiza-Laptop MINGW64 /e/Exercises/Exercises/Gym-Git-Exercises-Solutions (ft/bundle-2)
+$ git commit -m"feat: services.html"
+[ft/bundle-2 40f5967] feat: services.html
+ 1 file changed, 12 insertions(+)
+ create mode 100644 services.html
+
+user@Dosite-Cyiza-Laptop MINGW64 /e/Exercises/Exercises/Gym-Git-Exercises-Solutions (ft/bundle-2)
+$ git push origin ft/bundle-2
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 438 bytes | 438.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/bundle-2' on GitHub by visiting:
+remote:      https://github.com/dosite-cyiza/Gym-Git-Exercises-Solutions/pull/new/ft/bundle-2
+remote:
+To https://github.com/dosite-cyiza/Gym-Git-Exercises-Solutions.git
+ * [new branch]      ft/bundle-2 -> ft/bundle-2
+
+
+```
 
