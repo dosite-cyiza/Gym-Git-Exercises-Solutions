@@ -426,3 +426,141 @@ To https://github.com/dosite-cyiza/Gym-Git-Exercises-Solutions.git
 
 ```
 
+### Exercise 2
+
+```bash
+
+user@Dosite-Cyiza-Laptop MINGW64 /e/Exercises/Exercises/Gym-Git-Exercises-Solutions (ft/service-redesign)
+$ git pull origin main
+From https://github.com/dosite-cyiza/Gym-Git-Exercises-Solutions
+ * branch            main       -> FETCH_HEAD
+Updating 55e0a8c..9022fc3
+Fast-forward
+ README.md     | 421 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++-
+ about.html    |   0
+ home.html     |   0
+ services.html |  12 ++
+ 4 files changed, 432 insertions(+), 1 deletion(-)
+ create mode 100644 about.html
+ create mode 100644 home.html
+ create mode 100644 services.html
+
+user@Dosite-Cyiza-Laptop MINGW64 /e/Exercises/Exercises/Gym-Git-Exercises-Solutions (ft/service-redesign)
+$ git add services.html
+
+user@Dosite-Cyiza-Laptop MINGW64 /e/Exercises/Exercises/Gym-Git-Exercises-Solutions (ft/service-redesign)
+$ git commit -m"feat: service-redesign"
+On branch ft/service-redesign
+nothing to commit, working tree clean
+
+user@Dosite-Cyiza-Laptop MINGW64 /e/Exercises/Exercises/Gym-Git-Exercises-Solutions (ft/service-redesign)
+$ git commit -m"feat: service-redesign"
+On branch ft/service-redesign
+nothing to commit, working tree clean
+
+user@Dosite-Cyiza-Laptop MINGW64 /e/Exercises/Exercises/Gym-Git-Exercises-Solutions (ft/service-redesign)
+$ git add services.html
+
+user@Dosite-Cyiza-Laptop MINGW64 /e/Exercises/Exercises/Gym-Git-Exercises-Solutions (ft/service-redesign)
+$ git commit -m"ft/service-redesign"
+[ft/service-redesign 3db4be5] ft/service-redesign
+ 1 file changed, 6 insertions(+)
+
+user@Dosite-Cyiza-Laptop MINGW64 /e/Exercises/Exercises/Gym-Git-Exercises-Solutions (ft/service-redesign)
+$ git push origin ft/service-redesign
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 355 bytes | 355.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'ft/service-redesign' on GitHub by visiting:
+remote:      https://github.com/dosite-cyiza/Gym-Git-Exercises-Solutions/pull/new/ft/service-redesign
+remote:
+To https://github.com/dosite-cyiza/Gym-Git-Exercises-Solutions.git
+ * [new branch]      ft/service-redesign -> ft/service-redesign
+
+user@Dosite-Cyiza-Laptop MINGW64 /e/Exercises/Exercises/Gym-Git-Exercises-Solutions (ft/service-redesign)
+$ git checkout main
+Switched to branch 'main'
+
+user@Dosite-Cyiza-Laptop MINGW64 /e/Exercises/Exercises/Gym-Git-Exercises-Solutions (main)
+$ git add services.html
+
+user@Dosite-Cyiza-Laptop MINGW64 /e/Exercises/Exercises/Gym-Git-Exercises-Solutions (main)
+$ git commit -m"new changes in services page"
+[main 49e0c03] new changes in services page
+ 1 file changed, 6 insertions(+)
+
+user@Dosite-Cyiza-Laptop MINGW64 /e/Exercises/Exercises/Gym-Git-Exercises-Solutions (main)
+$ git push origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 359 bytes | 359.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/dosite-cyiza/Gym-Git-Exercises-Solutions.git
+   9022fc3..49e0c03  main -> main
+
+user@Dosite-Cyiza-Laptop MINGW64 /e/Exercises/Exercises/Gym-Git-Exercises-Solutions (main)
+$ git checkout ft/service-redesign
+error: Your local changes to the following files would be overwritten by checkout:
+        services.html
+Please commit your changes or stash them before you switch branches.
+Aborting
+
+user@Dosite-Cyiza-Laptop MINGW64 /e/Exercises/Exercises/Gym-Git-Exercises-Solutions (main)
+$ git add services.html
+
+user@Dosite-Cyiza-Laptop MINGW64 /e/Exercises/Exercises/Gym-Git-Exercises-Solutions (main)
+$ git commit -m"new changes in services page"
+[main a8c030e] new changes in services page
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+user@Dosite-Cyiza-Laptop MINGW64 /e/Exercises/Exercises/Gym-Git-Exercises-Solutions (main)
+$ git push origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 296 bytes | 296.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/dosite-cyiza/Gym-Git-Exercises-Solutions.git
+   49e0c03..a8c030e  main -> main
+
+user@Dosite-Cyiza-Laptop MINGW64 /e/Exercises/Exercises/Gym-Git-Exercises-Solutions (main)
+$ git checkout ft/services-redesign
+error: pathspec 'ft/services-redesign' did not match any file(s) known to git
+
+user@Dosite-Cyiza-Laptop MINGW64 /e/Exercises/Exercises/Gym-Git-Exercises-Solutions (main)
+$ git checkout ft/service-redesign
+Switched to branch 'ft/service-redesign'
+
+user@Dosite-Cyiza-Laptop MINGW64 /e/Exercises/Exercises/Gym-Git-Exercises-Solutions (ft/service-redesign)
+$ git merge main
+Auto-merging services.html
+CONFLICT (content): Merge conflict in services.html
+Automatic merge failed; fix conflicts and then commit the result.
+
+user@Dosite-Cyiza-Laptop MINGW64 /e/Exercises/Exercises/Gym-Git-Exercises-Solutions (ft/service-redesign|MERGING)
+$ git add services.html
+
+user@Dosite-Cyiza-Laptop MINGW64 /e/Exercises/Exercises/Gym-Git-Exercises-Solutions (ft/service-redesign)
+$ git commit -m"resolve conflict"
+On branch ft/service-redesign
+nothing to commit, working tree clean
+user@Dosite-Cyiza-Laptop MINGW64 /e/Exercises/Exercises/Gym-Git-Exercises-Solutions (ft/service-redesign)
+$ git push origin ft/service-redesign
+Enumerating objects: 1, done.
+Counting objects: 100% (1/1), done.
+Writing objects: 100% (1/1), 239 bytes | 239.00 KiB/s, done.
+Total 1 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/dosite-cyiza/Gym-Git-Exercises-Solutions.git
+   3db4be5..142399e  ft/service-redesign -> ft/service-redesign
+
+```
+
